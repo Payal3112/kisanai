@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanAI Feature Flow Diagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+        }
+
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .feature-section {
+            padding: 30px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .feature-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "●";
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            margin-top: 2px;
+        }
+
+        .feature-text {
+            flex-grow: 1;
+        }
+
+        .feature-text h3 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .feature-text p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .diagram-section {
+            background-color: #f8f9ff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .diagram-title {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .step-content h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .arrow {
+            width: 30px;
+            height: 3px;
+            background-color: #bdc3c7;
+            transform: rotate(0deg);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        @media (max-width: 600px) {
+            .flow-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .arrow {
+                width: 3px;
+                height: 30px;
+                margin: 10px 0;
+            }
+
+            .feature-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>KisanAI</h1>
+            <p>Satellite-Driven Crop Digital Twin for Intelligent Crop Monitoring</p>
+        </div>
+
+        <div class="feature-section">
+            <h2 class="section-title">Core Features</h2>
+
+            <ul class="feature-list">
+                <li>
+                    <div class="feature-icon">🌱</div>
+                    <div class="feature-text">
+                        <h3>Satellite Crop Mapping</h3>
+                        <p>Automatic crop identification and multi-season crop monitoring using satellite imagery</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-text">
+                        <h3>Crop Health Monitoring</h3>
+                        <p>NDVI-based vegetation monitoring, moisture stress detection, and crop health scoring</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">🌦️</div>
+                    <div class="feature-text">
+                        <h3>Weather Intelligence</h3>
+                        <p>Rainfall forecasting, temperature monitoring, and water deficit estimation</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-text">
+                        <h3>AI Advisory Engine</h3>
+                        <p>Provides recommendations for irrigation scheduling, water stress alerts, and crop management suggestions</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">💡</div>
+                    <div class="feature-text">
+                        <h3>Explainable AI</h3>
+                        <p>Every recommendation includes confidence score, contributing factors, and satellite evidence</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-text">
+                        <h3>Farmer Dashboard</h3>
+                        <p>Crop health map, time-series graphs, stress alerts, and advisory history</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-icon">🔮</div>
+                    <div class="feature-text">
+                        <h3>Future Features</h3>
+                        <p>Voice assistant, WhatsApp/SMS alerts, disease detection using leaf images, ground sensor integration</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="diagram-section">
+            <h2 class="diagram-title">Feature Flow Diagram</h2>
+            <p>How data flows from satellite to farmer insights</p>
+
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="step-circle">1</div>
+                    <div class="step-content">
+                        <h4>Satellite</h4>
+                        <p>Sentinel-2 imagery (optical) and future Sentinel-1 SAR data</p>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="flow-step">
+                    <div class="step-circle">2</div>
+                    <div class="step-content">
+                        <h4>Crop Mapping</h4>
+                        <p>Automatic crop identification and multi-season monitoring</p>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="flow-step">
+                    <div class="step-circle">3</div>
+                    <div class="step-content">
+                        <h4>Stress Detection</h4>
+                        <p>Moisture stress detection and crop health analysis using NDVI/NDWI/EVI</p>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="flow-step">
+                    <div class="step-circle">4</div>
+                    <div class="step-content">
+                        <h4>Weather Analysis</h4>
+                        <p>Rainfall forecasting, temperature monitoring, water deficit estimation</p>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="flow-step">
+                    <div class="step-circle">5</div>
+                    <div class="step-content">
+                        <h4>AI Advisory</h4>
+                        <p>Explainable recommendations with confidence scores and contributing factors</p>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+
+                <div class="flow-step">
+                    <div class="step-circle">6</div>
+                    <div class="step-content">
+                        <h4>Farmer Dashboard</h4>
+                        <p>Visual interface showing crop health, alerts, recommendations, and history</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            KisanAI Project • Built for Smart Water, Crop & Advisory System
+        </div>
+    </div>
+</body>
+</html>

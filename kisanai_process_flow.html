@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanAI Process Flow Diagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+        }
+
+        .header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .process-section {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .process-flow {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex-grow: 1;
+        }
+
+        .step-content h3 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .technical-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tech-tag {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #bdc3c7, transparent);
+            margin: 15px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        @media (max-width: 600px) {
+            .process-step {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .step-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>KisanAI</h1>
+            <p>Process Flow: From Satellite Data to Farmer Advisory</p>
+        </div>
+
+        <div class="process-section">
+            <h2 class="section-title">End-to-End Processing Pipeline</h2>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Satellite Images (Sentinel-2)</h3>
+                        <p>Multi-spectral optical imagery from Copernicus Sentinel-2 satellites providing 10-20m resolution data across visible, near-infrared, and shortwave infrared bands.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Sentinel-2</span>
+                            <span class="tech-tag">10-20m resolution</span>
+                            <span class="tech-tag">Multi-spectral</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Image Preprocessing</h3>
+                        <p>Atmospheric correction, cloud masking, geometric correction, and temporal compositing to prepare raw satellite data for analysis.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Atmospheric correction</span>
+                            <span class="tech-tag">Cloud masking</span>
+                            <span class="tech-tag">Temporal compositing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Feature Extraction</h3>
+                        <p>Calculation of key vegetation and moisture indices: NDVI (vegetation health), NDWI (water content), EVI (enhanced vegetation index), and other relevant indices.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">NDVI</span>
+                            <span class="tech-tag">NDWI</span>
+                            <span class="tech-tag">EVI</span>
+                            <span class="tech-tag">Vegetation indices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Crop Classification</h3>
+                        <p>Machine learning models classify crop types based on spectral-temporal patterns in the extracted features, enabling automatic crop identification.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">ML classification</span>
+                            <span class="tech-tag">Spectral-temporal</span>
+                            <span class="tech-tag">Crop types</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Crop Health Analysis</h3>
+                        <p>Analysis of vegetation indices over time to assess crop vigor, growth stage determination, and health scoring based on phenological patterns.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Time-series analysis</span>
+                            <span class="tech-tag">Growth stage</span>
+                            <span class="tech-tag">Health scoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Weather Integration</h3>
+                        <p>Integration of forecast data (rainfall, temperature, humidity) from sources like NASA POWER or OpenWeatherMap to complement satellite observations.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Weather forecasts</span>
+                            <span class="tech-tag">NASA POWER</span>
+                            <span class="tech-tag">OpenWeatherMap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Moisture Stress Detection</h3>
+                        <p>Combination of satellite-derived moisture indices (NDWI, LSWI) with weather data to detect and quantify crop water stress conditions.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">NDWI</span>
+                            <span class="tech-tag">LSWI</span>
+                            <span class="tech-tag">Water stress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h3>Water Deficit Estimation</h3>
+                        <p>Calculation of crop-specific water requirements vs. available water (from rainfall and soil moisture) to estimate irrigation water deficit.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Water requirement</span>
+                            <span class="tech-tag">Soil moisture</span>
+                            <span class="tech-tag">Irrigation deficit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">9</div>
+                    <div class="step-content">
+                        <h3>AI Recommendation Engine</h3>
+                        <p>Artificial intelligence models generate personalized recommendations for irrigation scheduling, fertilizer application, and crop management based on all integrated data.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">AI/ML models</span>
+                            <span class="tech-tag">Irrigation scheduling</span>
+                            <span class="tech-tag">Fertilizer advice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">10</div>
+                    <div class="step-content">
+                        <h3>Farmer Dashboard</h3>
+                        <p>Web-based interface displaying crop health maps, time-series graphs, stress alerts, and historical advisory data for informed decision-making.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Web dashboard</span>
+                            <span class="tech-tag">Crop health map</span>
+                            <span class="tech-tag">Time-series graphs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="process-step">
+                    <div class="step-number">11</div>
+                    <div class="step-content">
+                        <h3>Voice/SMS Alerts</h3>
+                        <p>Delivery of timely alerts and recommendations via voice calls or SMS notifications to ensure farmers receive critical information promptly.</p>
+                        <div class="technical-detail">
+                            <span class="tech-tag">Voice alerts</span>
+                            <span class="tech-tag">SMS notifications</span>
+                            <span class="tech-tag">Timely delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            KisanAI Project • Smart Water, Crop & Advisory System • Track 4
+        </div>
+    </div>
+</body>
+</html>
