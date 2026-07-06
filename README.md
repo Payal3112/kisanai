@@ -1,12 +1,18 @@
 # KisanAI - Satellite-Driven Crop Digital Twin
 
 A Streamlit-based frontend for the KisanAI project that provides satellite-driven crop monitoring and irrigation advisory services.
+<img width="1812" height="843" alt="image" src="https://github.com/user-attachments/assets/990f9962-5e90-434f-98ad-6102529cadba" />
+<img width="1822" height="787" alt="image" src="https://github.com/user-attachments/assets/6b171549-f05b-47c3-9559-663f8076c7a3" />
+<img width="1823" height="776" alt="image" src="https://github.com/user-attachments/assets/f4891aa1-0472-4b02-86d9-97c35173a179" />
+<img width="1851" height="792" alt="image" src="https://github.com/user-attachments/assets/7f9d7260-6153-4d3e-97e8-d976cb075edd" />
+
 
 ## Features
 
 - 📊 Interactive dashboard with crop health metrics
 - 💧 Water stress monitoring and analysis
 - 🌦️ Weather intelligence integration
+- 📥 Record data and download stats easily
 - 🤖 AI-powered advisory engine with explainable recommendations
 - 🗺️ Satellite map visualization with NDVI indicators
 - 📈 Historical trends and analytics
